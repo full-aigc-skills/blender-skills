@@ -1,0 +1,36 @@
+{
+  "name": "blender-skills",
+  "version": "1.0.0",
+  "description": "Blender AIGC skills — modeling, rigging, animation, shading, rendering, compositing, sequencing, simulation, tracking, Grease Pencil, and UV/material workflows.",
+  "author": {
+    "name": "AIGC Skills Community"
+  },
+  "homepage": "https://github.com/full-aigc-skills/blender-skills",
+  "repository": "https://github.com/full-aigc-skills/blender-skills",
+  "source": "./",
+  "skills": [
+    "./skills/blender-background-jobs",
+    "./skills/blender-character-animation",
+    "./skills/blender-character-rigging",
+    "./skills/blender-cinematography",
+    "./skills/blender-curves",
+    "./skills/blender-design",
+    "./skills/blender-export",
+    "./skills/blender-grease-pencil",
+    "./skills/blender-hair",
+    "./skills/blender-hard-surface",
+    "./skills/blender-inspect",
+    "./skills/blender-mcp-setup",
+    "./skills/blender-preview",
+    "./skills/blender-procedural-modeling",
+    "./skills/blender-quality-validation",
+    "./skills/blender-render-compositing",
+    "./skills/blender-retopology",
+    "./skills/blender-scene-assembly",
+    "./skills/blender-sculpt-surface",
+    "./skills/blender-sequence-editing",
+    "./skills/blender-simulation",
+    "./skills/blender-tracking",
+    "./skills/blender-uv-material"
+  ]
+}
