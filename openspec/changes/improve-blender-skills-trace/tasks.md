@@ -9,6 +9,7 @@
 - [x] 2.2 Run lint with zero failures.
 - [x] 2.3 Run TRACE for all 23 skills and reach overall score 4.5 or higher for every skill.
 - [x] 2.4 Replace push-based dispatch to the obsolete repository with immutable release dispatch to `full-aigc-plugins/blender-design-plugin`.
+- [x] 2.5 Enforce the pinned TRACE evaluator in CI and remove the obsolete Codex-only README identity.
 
 ## 3. OpenSpec and release
 

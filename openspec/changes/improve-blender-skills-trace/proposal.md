@@ -9,6 +9,7 @@ The 23 published Blender skills currently average 3.789 under TRACE and omit rep
 - Remove install-fragile relative references to sibling skills or package-level docs.
 - Add deterministic lint and TRACE release gates requiring all 23 skills to score at least 4.5.
 - Dispatch only immutable release tags and peeled commit SHAs to the actual Blender plugin consumer.
+- Replace the obsolete Codex-only plugin identity in public package documentation.
 
 ## Capabilities
 

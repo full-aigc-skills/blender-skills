@@ -1,6 +1,6 @@
 {
   "name": "blender-skills",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Blender AIGC skills — modeling, rigging, animation, shading, rendering, compositing, sequencing, simulation, tracking, Grease Pencil, and UV/material workflows.",
   "author": {
     "name": "AIGC Skills Community"

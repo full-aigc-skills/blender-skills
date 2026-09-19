@@ -2,7 +2,7 @@
 
 **Blender AIGC skills** — modeling, rigging, animation, shading, rendering, compositing, sequencing, simulation, tracking, Grease Pencil, and UV/material workflows.
 
-本包包含 **23 个技能**（与 codex-blender-plugin 的内容技能一一对应；插件自持 6 个宿主接入技能）。
+本包包含 **23 个技能**（由跨宿主的 [blender-design-plugin](https://github.com/full-aigc-plugins/blender-design-plugin) 按不可变版本引用；插件自持 6 个宿主接入技能）。
 
 ## 📦 安装
 
