@@ -1,10 +1,13 @@
-"""Lint gate for skill packages: every skills/<name>/SKILL.md must be well-formed.
+"""Lint gate for independently installable Blender skills.
 
 Rules (exit 1 on any violation):
 - every directory under skills/ contains SKILL.md
 - frontmatter has a `name` equal to its directory name
 - `description` is present, single-line (block scalars break some hosts), 20-1024 chars
 - skill names are lowercase kebab-case without a `codex-` prefix
+- each skill contains the operational sections required by the package contract
+- SKILL.md stays below 500 lines and local Markdown links resolve
+- relative links may not escape the current skill directory
 """
 import re
 import sys
@@ -12,6 +15,15 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 NAME_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
+REQUIRED_HEADINGS = (
+    "## 什么时候使用（When to Use）",
+    "## 输入与前置条件（Prerequisites）",
+    "## 执行流程（Workflow）",
+    "## 验证与交付证据（Validation）",
+    "## Rules 与能力边界（不适用场景）",
+    "## Gotchas（常见问题与恢复）",
+)
 
 
 def frontmatter(text: str) -> dict:
@@ -44,7 +56,8 @@ def main() -> int:
         if not skill_md.is_file():
             errors.append(f"{skill_dir.name}: missing SKILL.md")
             continue
-        fm = frontmatter(skill_md.read_text())
+        text = skill_md.read_text(encoding="utf-8")
+        fm = frontmatter(text)
         name = fm.get("name", "")
         desc = fm.get("description", "")
         if not name:
@@ -62,6 +75,24 @@ def main() -> int:
                 errors.append(f"{skill_dir.name}: description must be single-line (no block scalars)")
             elif not (20 <= len(desc) <= 1024):
                 errors.append(f"{skill_dir.name}: description length {len(desc)} outside 20..1024")
+        line_count = len(text.splitlines())
+        if line_count >= 500:
+            errors.append(f"{skill_dir.name}: SKILL.md has {line_count} lines; must stay below 500")
+        for heading in REQUIRED_HEADINGS:
+            if heading not in text:
+                errors.append(f"{skill_dir.name}: missing required heading '{heading}'")
+        for raw_target in LINK_RE.findall(text):
+            target = raw_target.split("#", 1)[0].strip()
+            if not target or target.startswith(("http://", "https://", "mailto:")):
+                continue
+            resolved = (skill_dir / target).resolve()
+            try:
+                resolved.relative_to(skill_dir.resolve())
+            except ValueError:
+                errors.append(f"{skill_dir.name}: relative link escapes skill directory: {raw_target}")
+                continue
+            if not resolved.exists():
+                errors.append(f"{skill_dir.name}: broken local link: {raw_target}")
     for error in errors:
         print(f"ERROR: {error}")
     print(f"lint_skills: {len(dirs)} skills, {len(errors)} errors")
