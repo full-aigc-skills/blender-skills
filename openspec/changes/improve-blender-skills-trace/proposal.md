@@ -8,6 +8,7 @@ The 23 published Blender skills currently average 3.789 under TRACE and omit rep
 - Keep domain-specific command and acceptance guidance in each skill while moving reusable operating policy into package references.
 - Remove install-fragile relative references to sibling skills or package-level docs.
 - Add deterministic lint and TRACE release gates requiring all 23 skills to score at least 4.5.
+- Dispatch only immutable release tags and peeled commit SHAs to the actual Blender plugin consumer.
 
 ## Capabilities
 
@@ -21,4 +22,4 @@ None.
 
 ## Impact
 
-This changes `skills/*/SKILL.md`, skill-local references/examples, and package validation tooling. It does not change Blender plugin runtime code, command schemas, or the already published `v1.0.0` tag.
+This changes `skills/*/SKILL.md`, skill-local references/examples, package validation tooling, and the release dispatch workflow. It does not change Blender plugin runtime code, command schemas, or the already published `v1.0.0` tag.

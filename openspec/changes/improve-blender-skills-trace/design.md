@@ -32,6 +32,10 @@ Required support material will live under the same skill directory. Cross-skill 
 
 A package script checks frontmatter, required sections, dead Markdown links, and file-size limits. The existing deterministic TRACE evaluator supplies the 4.5 score gate. Both are required because TRACE scoring alone cannot prove link integrity or domain correctness.
 
+### Dispatch only immutable releases
+
+The consumer notification runs on a published release, validates a semantic `vX.Y.Z` tag, peels it to a commit SHA, and sends both values to `full-aigc-plugins/blender-design-plugin`. Push events are not dispatched because they do not identify a release that a consumer lock can safely adopt.
+
 ## Risks / Trade-offs
 
 - Repeated section names increase document length, but make dispatch and evaluation behavior predictable.
@@ -44,3 +48,4 @@ A package script checks frontmatter, required sections, dead Markdown links, and
 2. Run TRACE and resolve every sub-4.5 result.
 3. Validate the OpenSpec change.
 4. Commit and publish a new immutable skill release only after clean verification.
+5. Verify that the release dispatch carries the tag and commit to the actual consumer repository.
