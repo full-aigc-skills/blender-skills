@@ -2,13 +2,16 @@
 
 Rules (exit 1 on any violation):
 - every directory under skills/ contains SKILL.md
+- the package manifest declares every and only packaged skill directory
 - frontmatter has a `name` equal to its directory name
 - `description` is present, single-line (block scalars break some hosts), 20-1024 chars
 - skill names are lowercase kebab-case without a `codex-` prefix
 - each skill contains the operational sections required by the package contract
 - SKILL.md stays below 500 lines and local Markdown links resolve
 - relative links may not escape the current skill directory
+- adapted video workflow skills retain their upstream MIT attribution
 """
+import json
 import re
 import sys
 from pathlib import Path
@@ -51,6 +54,23 @@ def main() -> int:
     dirs = sorted(p for p in skills_dir.iterdir() if p.is_dir())
     if not dirs:
         errors.append("skills/ has no skill directories")
+    manifest_path = ROOT / ".claude-plugin" / "plugin.json"
+    try:
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        errors.append(f"invalid package manifest: {exc}")
+        manifest = {}
+    declared = manifest.get("skills", [])
+    declared_names = {
+        Path(item.removeprefix("./")).name
+        for item in declared
+        if isinstance(item, str) and item.startswith("./skills/")
+    }
+    directory_names = {path.name for path in dirs}
+    if declared_names != directory_names:
+        missing = sorted(directory_names - declared_names)
+        extra = sorted(declared_names - directory_names)
+        errors.append(f"manifest skill mismatch: missing={missing}, extra={extra}")
     for skill_dir in dirs:
         skill_md = skill_dir / "SKILL.md"
         if not skill_md.is_file():
@@ -93,6 +113,12 @@ def main() -> int:
                 continue
             if not resolved.exists():
                 errors.append(f"{skill_dir.name}: broken local link: {raw_target}")
+    video_skills = {"blender-video-original", "blender-video-recreate"}
+    if video_skills & directory_names:
+        notice_path = ROOT / "NOTICE"
+        notice = notice_path.read_text(encoding="utf-8") if notice_path.is_file() else ""
+        if "modengsir/blender-video-workflows" not in notice or "MIT License" not in notice:
+            errors.append("NOTICE must retain blender-video-workflows MIT attribution")
     for error in errors:
         print(f"ERROR: {error}")
     print(f"lint_skills: {len(dirs)} skills, {len(errors)} errors")

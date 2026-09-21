@@ -1,8 +1,8 @@
 # blender-skills
 
-**Blender AIGC skills** — modeling, rigging, animation, shading, rendering, compositing, sequencing, simulation, tracking, Grease Pencil, and UV/material workflows.
+**Blender AIGC skills** — modeling, rigging, animation, reference-video recreation, original white-model video, rendering, compositing, sequencing, simulation, tracking, Grease Pencil, and UV/material workflows.
 
-本包包含 **23 个技能**（由跨宿主的 [blender-design-plugin](https://github.com/full-aigc-plugins/blender-design-plugin) 按不可变版本引用；插件自持 6 个宿主接入技能）。
+本包包含 **25 个技能**（由跨宿主的 [blender-design-plugin](https://github.com/full-aigc-plugins/blender-design-plugin) 按不可变版本引用；插件自持宿主接入技能）。
 
 ## 📦 安装
 
@@ -10,7 +10,7 @@
 npx skills add full-aigc-skills/blender-skills
 ```
 
-## 🎯 技能列表 (23)
+## 🎯 技能列表 (25)
 
 | 技能 | 描述 |
 |------|------|
@@ -36,6 +36,8 @@ npx skills add full-aigc-skills/blender-skills
 | `blender-simulation` | 刚体/碰撞/布料/软体/烟雾/点缓存/流体缓存工作流 |
 | `blender-tracking` | 加载镜头、创建追踪标记、求解前景摄像机、设置场景、验证重投影误差 |
 | `blender-uv-material` | 为可编辑资产准备 UV 与 PBR 材质，含纹理色彩空间与法线贴图语义 |
+| `blender-video-original` | 把文字创意转成可编辑的 Blender 关节白模视频、镜头、验收证据与可选生成交接 |
+| `blender-video-recreate` | 分析参考视频并复刻可观察的动作、接触、构图和运镜，交付可编辑白模与对比证据 |
 
 ## 🤖 支持的智能体
 
@@ -44,13 +46,13 @@ Claude Code / Codex / Cursor / OpenCode / Gemini CLI / GitHub Copilot / Windsurf
 <!-- FULL_STACK_DOC_START -->
 ## 项目定位与边界
 
-`blender-skills` 是包含 **23 个可独立安装 Agent Skill** 的源代码仓库，当前清单版本为 `1.0.1`。本仓负责技能的触发说明、工作流、references、examples 与质量门禁；宿主插件的 Hook、MCP、凭据注入和运行时脚本不属于本仓职责。
+`blender-skills` 是包含 **25 个可独立安装 Agent Skill** 的源代码仓库，当前清单版本为 `1.1.0`。本仓负责技能的触发说明、工作流、references、examples 与质量门禁；宿主插件的 Hook、MCP、凭据注入和运行时脚本不属于本仓职责。
 
 | 已确认事实 | 值 | 证据 |
 |---|---|---|
 | 安装包 | `full-aigc-skills/blender-skills` | `.claude-plugin/plugin.json`、仓库远端 |
-| 可安装技能 | 23 | `skills/*/SKILL.md` |
-| 当前版本 | `1.0.1` | `.claude-plugin/plugin.json` |
+| 可安装技能 | 25 | `skills/*/SKILL.md` |
+| 当前版本 | `1.1.0` | `.claude-plugin/plugin.json` |
 | 规格事实源 | OpenSpec | `openspec/config.yaml` |
 | 许可证 | Apache-2.0 | `LICENSE` |
 
