@@ -2,7 +2,7 @@
 
 **Blender AIGC skills** — modeling, rigging, animation, reference-video recreation, original white-model video, rendering, compositing, sequencing, simulation, tracking, Grease Pencil, and UV/material workflows.
 
-本包包含 **25 个技能**（由跨宿主的 [blender-design-plugin](https://github.com/full-aigc-plugins/blender-design-plugin) 按不可变版本引用；插件自持宿主接入技能）。
+本包包含 **26 个技能**（由跨宿主的 [blender-design-plugin](https://github.com/full-aigc-plugins/blender-design-plugin) 按不可变版本引用；插件自持宿主接入技能）。
 
 ## 📦 安装
 
@@ -10,10 +10,11 @@
 npx skills add full-aigc-skills/blender-skills
 ```
 
-## 🎯 技能列表 (25)
+## 🎯 技能列表 (26)
 
 | 技能 | 描述 |
 |------|------|
+| `blender-ai-replication` | 用 LLM + VLM critic 在 Blender MCP 上做参考图→3D 场景迭代复刻，含 dream-loop orchestrator 与首版 JSON 命令序列 |
 | `blender-background-jobs` | 批量渲染、帧序列导出、显式帧恢复、视频合成、仿真烘培 |
 | `blender-character-animation` | 驱动已注册的角色绑定与单个交互道具，含 IK 控制器与连续性校验 |
 | `blender-character-rigging` | 构建与检查可编辑的骨架、蒙皮权重、IK、关节限制、道具约束 |
@@ -46,13 +47,13 @@ Claude Code / Codex / Cursor / OpenCode / Gemini CLI / GitHub Copilot / Windsurf
 <!-- FULL_STACK_DOC_START -->
 ## 项目定位与边界
 
-`blender-skills` 是包含 **25 个可独立安装 Agent Skill** 的源代码仓库，当前清单版本为 `1.1.0`。本仓负责技能的触发说明、工作流、references、examples 与质量门禁；宿主插件的 Hook、MCP、凭据注入和运行时脚本不属于本仓职责。
+`blender-skills` 是包含 **26 个可独立安装 Agent Skill** 的源代码仓库，当前清单版本为 `1.2.0`。本仓负责技能的触发说明、工作流、references、examples 与质量门禁；宿主插件的 Hook、MCP、凭据注入和运行时脚本不属于本仓职责。
 
 | 已确认事实 | 值 | 证据 |
 |---|---|---|
 | 安装包 | `full-aigc-skills/blender-skills` | `.claude-plugin/plugin.json`、仓库远端 |
-| 可安装技能 | 25 | `skills/*/SKILL.md` |
-| 当前版本 | `1.1.0` | `.claude-plugin/plugin.json` |
+| 可安装技能 | 26 | `skills/*/SKILL.md` |
+| 当前版本 | `1.2.0` | `.claude-plugin/plugin.json` |
 | 规格事实源 | OpenSpec | `openspec/config.yaml` |
 | 许可证 | Apache-2.0 | `LICENSE` |
 

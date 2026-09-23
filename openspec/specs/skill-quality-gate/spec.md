@@ -1,7 +1,13 @@
 # skill-quality-gate Specification
 
 ## Purpose
-TBD - created by archiving change improve-blender-skills-trace. Update Purpose after archive.
+
+Define the contract for a publishable Blender skill: every published skill SHALL be
+independently actionable in isolation, SHALL bind domain claims to observable evidence
+rather than command success, and SHALL pass the deterministic lint + TRACE gates before
+release. The capability exists so granular `npx skills add --skill <name>` installs
+deliver complete, working skills without requiring sibling skills or the harness runtime.
+
 ## Requirements
 ### Requirement: Each skill is independently actionable
 

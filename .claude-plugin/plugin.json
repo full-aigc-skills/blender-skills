@@ -1,6 +1,6 @@
 {
   "name": "blender-skills",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Blender AIGC skills — modeling, rigging, animation, reference-video recreation, original white-model video, rendering, compositing, sequencing, simulation, tracking, and materials.",
   "author": {
     "name": "AIGC Skills Community"
@@ -33,6 +33,7 @@
     "./skills/blender-tracking",
     "./skills/blender-uv-material",
     "./skills/blender-video-original",
-    "./skills/blender-video-recreate"
+    "./skills/blender-video-recreate",
+    "./skills/blender-ai-replication"
   ]
 }
