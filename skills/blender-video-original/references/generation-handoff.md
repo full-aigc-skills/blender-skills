@@ -1,5 +1,7 @@
 # Optional generation handoff
 
+For the official Jimeng Blender uploader, use the independently installable `blender-dreamina-export` skill (`npx skills add full-aigc-skills/blender-skills --skill blender-dreamina-export`) to install the add-on and verify its web reference-video handoff. This does not imply a Seedance generation task was submitted.
+
 Treat local white-model production and stochastic video generation as separate acceptance layers.
 Discover the current provider's documented inputs instead of guessing from its name. Prefer a
 video/motion reference route when available; image-only input weakens temporal control.

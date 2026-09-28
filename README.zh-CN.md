@@ -2,7 +2,7 @@
 
 **Blender AIGC skills** — modeling, rigging, animation, reference-video recreation, original white-model video, rendering, compositing, sequencing, simulation, tracking, Grease Pencil, and UV/material workflows.
 
-本包包含 **26 个技能**（由跨宿主的 [blender-design-plugin](https://github.com/full-aigc-plugins/blender-design-plugin) 按不可变版本引用；插件自持宿主接入技能）。
+本包包含 **27 个技能**（由跨宿主的 [blender-design-plugin](https://github.com/full-aigc-plugins/blender-design-plugin) 按不可变版本引用；插件自持宿主接入技能）。
 
 ## 📦 安装
 
@@ -10,7 +10,7 @@
 npx skills add full-aigc-skills/blender-skills
 ```
 
-## 🎯 技能列表 (26)
+## 🎯 技能列表 (27)
 
 | 技能 | 描述 |
 |------|------|
@@ -21,6 +21,7 @@ npx skills add full-aigc-skills/blender-skills
 | `blender-cinematography` | 设计与验证摄像机、镜头、主体瞄准、路径运动、焦点、构图 |
 | `blender-curves` | 可编辑路径/样条/电缆/导轨/柱面、曲线驱动道具 |
 | `blender-design` | 把想法变成 Blender 场景（里程碑式建模、材质、灯光、摄像机、动画） |
+| `blender-dreamina-export` | 安装即梦 Seedance 2.5 白模渲染上传器，通过相机渲染或本地视频交接至即梦参考视频 |
 | `blender-export` | 把已批准快照导出为 model/image/video/EXR/USD/Alembic，含回执校验 |
 | `blender-grease-pencil` | 创建可编辑 Grease Pencil 层、材质、帧绘制，2D/3D 混合场景 |
 | `blender-hair` | 创建原生 Blender 毛发曲线（表面局部发束点、半径、绑定源表面） |
@@ -47,13 +48,13 @@ Claude Code / Codex / Cursor / OpenCode / Gemini CLI / GitHub Copilot / Windsurf
 <!-- FULL_STACK_DOC_START -->
 ## 项目定位与边界
 
-`blender-skills` 是包含 **26 个可独立安装 Agent Skill** 的源代码仓库，当前清单版本为 `1.2.0`。本仓负责技能的触发说明、工作流、references、examples 与质量门禁；宿主插件的 Hook、MCP、凭据注入和运行时脚本不属于本仓职责。
+`blender-skills` 是包含 **27 个可独立安装 Agent Skill** 的源代码仓库，当前清单版本为 `1.3.0`。本仓负责技能的触发说明、工作流、references、examples 与质量门禁；宿主插件的 Hook、MCP、凭据注入和运行时脚本不属于本仓职责。
 
 | 已确认事实 | 值 | 证据 |
 |---|---|---|
 | 安装包 | `full-aigc-skills/blender-skills` | `.claude-plugin/plugin.json`、仓库远端 |
-| 可安装技能 | 26 | `skills/*/SKILL.md` |
-| 当前版本 | `1.2.0` | `.claude-plugin/plugin.json` |
+| 可安装技能 | 27 | `skills/*/SKILL.md` |
+| 当前版本 | `1.3.0` | `.claude-plugin/plugin.json` |
 | 规格事实源 | OpenSpec | `openspec/config.yaml` |
 | 许可证 | Apache-2.0 | `LICENSE` |
 

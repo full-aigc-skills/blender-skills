@@ -1,5 +1,7 @@
 # Optional model-video handoff
 
+For the official Jimeng Blender uploader, use the independently installable `blender-dreamina-export` skill (`npx skills add full-aigc-skills/blender-skills --skill blender-dreamina-export`) to install the add-on and verify its web reference-video handoff. This does not imply a Seedance generation task was submitted.
+
 ## Capability and authorization gate
 
 Inspect the current provider or companion Skill rather than inferring support from a model name.

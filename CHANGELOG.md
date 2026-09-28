@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.0 - Unreleased
+
+- Added `blender-dreamina-export` for official Jimeng Seedance 2.5 uploader setup, camera-render or local-video handoff, and verification that the web reference input contains the intended video.
+- Added five focused examples, registered the 27th skill, and linked the official uploader from both Blender white-model video workflows.
+- Documented the distinction between the Jimeng uploader and the Codex Blender Connector. Live vendor-plugin and Jimeng-web acceptance remains open.
+
 ## 1.2.0 - 2026-09-23
 
 - Added `blender-ai-replication` for LLM-driven, VLM-critic-validated iteration on top of a Blender MCP bridge.
