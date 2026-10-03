@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender 角色动画"
+  short_description: "为已注册的角色骨架与交互道具设计动画时序和连续动作"
+  default_prompt: "使用 $blender-character-animation 为已注册的角色骨架与交互道具设计动画时序和连续动作；先核对输入、可用能力和交付要求。"

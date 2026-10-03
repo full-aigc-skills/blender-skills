@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender 场景装配"
+  short_description: "组织场景集合、对象、变换与可见性，保留资产来源和可编辑性"
+  default_prompt: "使用 $blender-scene-assembly 组织场景集合、对象、变换与可见性，保留资产来源和可编辑性；先核对输入、可用能力和交付要求。"

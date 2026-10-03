@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender 物理仿真"
+  short_description: "配置并验证刚体、碰撞、布料、软体、烟雾与流体缓存工作流"
+  default_prompt: "使用 $blender-simulation 配置并验证刚体、碰撞、布料、软体、烟雾与流体缓存工作流；先核对输入、可用能力和交付要求。"

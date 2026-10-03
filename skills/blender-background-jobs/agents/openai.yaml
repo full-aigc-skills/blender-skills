@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender 后台任务"
+  short_description: "通过隔离快照执行 Blender 渲染、烘焙或导出并核对恢复状态"
+  default_prompt: "使用 $blender-background-jobs 通过隔离快照执行 Blender 渲染、烘焙或导出并核对恢复状态；先核对输入、可用能力和交付要求。"

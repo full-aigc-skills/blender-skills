@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender 质量验收"
+  short_description: "按对象、帧范围与容差检查几何、碰撞、角色动作和镜头标准"
+  default_prompt: "使用 $blender-quality-validation 按对象、帧范围与容差检查几何、碰撞、角色动作和镜头标准；先核对输入、可用能力和交付要求。"

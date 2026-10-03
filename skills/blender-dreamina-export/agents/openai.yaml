@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender 即梦上传"
+  short_description: "检查或安装官方上传器，把 Blender 预览或本地视频送入即梦参考输入"
+  default_prompt: "使用 $blender-dreamina-export 检查或安装官方上传器，把 Blender 预览或本地视频送入即梦参考输入；先核对输入、可用能力和交付要求。"

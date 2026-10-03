@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender 雕刻细节"
+  short_description: "使用遮罩、位移、雕刻笔触与重网格细化 Blender 表面结构"
+  default_prompt: "使用 $blender-sculpt-surface 使用遮罩、位移、雕刻笔触与重网格细化 Blender 表面结构；先核对输入、可用能力和交付要求。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender 蜡笔绘画"
+  short_description: "创建可编辑 Grease Pencil 图层、材质、帧绘画与二维三维混合场景"
+  default_prompt: "使用 $blender-grease-pencil 创建可编辑 Grease Pencil 图层、材质、帧绘画与二维三维混合场景；先核对输入、可用能力和交付要求。"

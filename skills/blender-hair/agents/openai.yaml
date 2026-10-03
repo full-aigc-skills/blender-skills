@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender 毛发曲线"
+  short_description: "根据表面局部坐标、发丝点与半径建立并检查原生毛发曲线"
+  default_prompt: "使用 $blender-hair 根据表面局部坐标、发丝点与半径建立并检查原生毛发曲线；先核对输入、可用能力和交付要求。"

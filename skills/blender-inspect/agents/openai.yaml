@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender 场景检查"
+  short_description: "只读检查当前 Blender 场景，为后续建模、预览和导出提供证据"
+  default_prompt: "使用 $blender-inspect 只读检查当前 Blender 场景，为后续建模、预览和导出提供证据；先核对输入、可用能力和交付要求。"

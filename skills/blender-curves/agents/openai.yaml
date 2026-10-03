@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender 曲线建模"
+  short_description: "用可编辑曲线构建路径、轮廓、线缆、轨道或曲线驱动道具"
+  default_prompt: "使用 $blender-curves 用可编辑曲线构建路径、轮廓、线缆、轨道或曲线驱动道具；先核对输入、可用能力和交付要求。"

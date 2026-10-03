@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender 视频剪辑"
+  short_description: "在 VSE 时间线组织媒体、转场、速度与音频，并核对本地输出"
+  default_prompt: "使用 $blender-sequence-editing 在 VSE 时间线组织媒体、转场、速度与音频，并核对本地输出；先核对输入、可用能力和交付要求。"

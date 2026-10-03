@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender 角色绑定"
+  short_description: "建立并检查角色骨架、蒙皮权重、IK 控制与道具约束"
+  default_prompt: "使用 $blender-character-rigging 建立并检查角色骨架、蒙皮权重、IK 控制与道具约束；先核对输入、可用能力和交付要求。"

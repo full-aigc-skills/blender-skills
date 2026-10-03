@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender 硬表面建模"
+  short_description: "通过网格与修改器创建可编辑产品、机械部件或硬表面道具"
+  default_prompt: "使用 $blender-hard-surface 通过网格与修改器创建可编辑产品、机械部件或硬表面道具；先核对输入、可用能力和交付要求。"

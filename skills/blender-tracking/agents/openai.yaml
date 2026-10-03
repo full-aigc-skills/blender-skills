@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender 摄像机追踪"
+  short_description: "从已授权素材建立追踪标记，求解相机并检查场景重投影误差"
+  default_prompt: "使用 $blender-tracking 从已授权素材建立追踪标记，求解相机并检查场景重投影误差；先核对输入、可用能力和交付要求。"

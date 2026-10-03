@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender 参考图复刻"
+  short_description: "将参考图迭代复刻为可编辑 Blender 场景，结合视觉评审改进"
+  default_prompt: "使用 $blender-ai-replication 将参考图迭代复刻为可编辑 Blender 场景，结合视觉评审改进；先核对输入、可用能力和交付要求。"

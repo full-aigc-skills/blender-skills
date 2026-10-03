@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender 程序化建模"
+  short_description: "构建 Geometry Nodes 与参数化环境，核对节点和接口版本语义"
+  default_prompt: "使用 $blender-procedural-modeling 构建 Geometry Nodes 与参数化环境，核对节点和接口版本语义；先核对输入、可用能力和交付要求。"

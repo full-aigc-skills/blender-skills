@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender UV 与材质"
+  short_description: "为产品或角色准备 UV 与物理材质，检查纹理色彩和法线语义"
+  default_prompt: "使用 $blender-uv-material 为产品或角色准备 UV 与物理材质，检查纹理色彩和法线语义；先核对输入、可用能力和交付要求。"

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blender MCP 就绪诊断"
+  short_description: "检查插件、MCP 服务与 Harness 会话，定位 Blender 连接问题"
+  default_prompt: "使用 $blender-mcp-setup 检查插件、MCP 服务与 Harness 会话，定位 Blender 连接问题；先核对输入、可用能力和交付要求。"
